@@ -7,7 +7,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    int scoreTeamA=0, scoreTeamB=0;
+    private int scoreTeamA=0, scoreTeamB=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,36 +30,64 @@ public class MainActivity extends AppCompatActivity {
         scoreView.setText(String.valueOf(score));
     }
 
+    /**
+     * Increments 3 points for team A
+     * @param view
+     */
     public void increment3PointsTeamA(View view){
         scoreTeamA+=3;
         displayForTeamA(scoreTeamA);
     }
 
+    /**
+     * Increments 2 points for team A
+     * @param view
+     */
     public void increment2PointsTeamA(View view){
         scoreTeamA+=2;
         displayForTeamA(scoreTeamA);
     }
 
+    /**
+     * Increments 1 point for team A
+     * @param view
+     */
     public void freeThrowTeamA(View view){
         scoreTeamA++;
         displayForTeamA(scoreTeamA);
     }
 
+    /**
+     * Increments 3 points for team B
+     * @param view
+     */
     public void increment3PointsTeamB(View view){
         scoreTeamB+=3;
         displayForTeamB(scoreTeamB);
     }
 
+    /**
+     * Increments 2 points for team B
+     * @param view
+     */
     public void increment2PointsTeamB(View view){
         scoreTeamB+=2;
         displayForTeamB(scoreTeamB);
     }
 
+    /**
+     * Increments 1 point for team B
+     * @param view
+     */
     public void freeThrowTeamB(View view){
         scoreTeamB++;
         displayForTeamB(scoreTeamB);
     }
 
+    /**
+     * Resets all scores
+     * @param view
+     */
     public void resetScores(View view){
         scoreTeamA=0;
         scoreTeamB=0;
